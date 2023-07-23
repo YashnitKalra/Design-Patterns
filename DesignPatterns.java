@@ -1,4 +1,5 @@
 import Patterns.*;
+import Patterns.AbstractFactory.*;
 import Patterns.Factory.*;
 
 public class DesignPatterns {
@@ -12,6 +13,11 @@ public class DesignPatterns {
         NotificationService.sendNotification("EMAIL");
         // NotificationService.sendNotification("PUSH");
 
+        // Abstract Factory Design Pattern
+        Car luxuryCar = CarFactory.buildCar(CarType.LUXURY);
+        Car microCar = CarFactory.buildCar(CarType.MICRO);
+        System.out.println(luxuryCar);
+        System.out.println(microCar);
     }
 }
 
